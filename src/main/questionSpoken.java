@@ -12,6 +12,7 @@ import java.io.FileInputStream;
 //import java.io.InputStream;
 import java.io.IOException;
 import org.newdawn.easyogg.*;
+import java.util.concurrent.TimeUnit;
 /**
  *
  * @author james
@@ -176,9 +177,10 @@ public class questionSpoken extends javax.swing.JDialog
         {
             fileIn = new FileInputStream("Audio" + getSeperator() + currentQuestion.get("audio") + ".ogg");
             soundFile = new OggClip(fileIn);
+            TimeUnit.SECONDS.sleep(1);
             soundFile.play();
         }
-        catch (IOException ex)
+        catch (IOException | InterruptedException ex)
         {
             System.out.println(ex);
             System.out.println(ex.toString());

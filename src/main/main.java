@@ -75,11 +75,11 @@ public class main extends javax.swing.JFrame
 
         questionStyleButtonGroup.add(textRadioButton);
         textRadioButton.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
-        textRadioButton.setSelected(true);
         textRadioButton.setText("Text");
 
         questionStyleButtonGroup.add(spokenRadioButton);
         spokenRadioButton.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
+        spokenRadioButton.setSelected(true);
         spokenRadioButton.setText("Spoken");
         spokenRadioButton.addActionListener(new java.awt.event.ActionListener()
         {
